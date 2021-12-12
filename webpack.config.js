@@ -40,6 +40,10 @@ module.exports = {
                     }]
             },
             {
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            },
+            {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
                 use: [

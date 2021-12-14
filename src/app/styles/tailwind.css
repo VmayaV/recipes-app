@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
+
+.fade-enter.card {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .fade-enter-active.card {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .fade-exit.card {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .fade-exit-active.card {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .fade-enter-active.card,
+  .fade-exit-active.card {
+    transition: opacity 500ms, transform 500ms;
+  }
+  .tag{
+    @apply bg-dark-gray mr-2 rounded-md text-white text-xs px-3 py-2 flex
+  }
 @tailwind utilities;

@@ -35720,8 +35720,8 @@ const NotFound_1 = __importDefault(__webpack_require__(/*! ./pages/NotFound */ "
 const App = () => {
     return (react_1.default.createElement(react_router_dom_1.Routes, null,
         react_1.default.createElement(react_router_dom_1.Route, { path: '*', element: react_1.default.createElement(NotFound_1.default, null) }),
-        react_1.default.createElement(react_router_dom_1.Route, { path: "/", element: react_1.default.createElement(Home_1.default, null) }),
-        react_1.default.createElement(react_router_dom_1.Route, { path: "/details/:id", element: react_1.default.createElement(Details_1.default, null) })));
+        react_1.default.createElement(react_router_dom_1.Route, { path: "/recipes-app/", element: react_1.default.createElement(Home_1.default, null) }),
+        react_1.default.createElement(react_router_dom_1.Route, { path: "/recipes-app/details/:id", element: react_1.default.createElement(Details_1.default, null) })));
 };
 exports["default"] = App;
 
@@ -35781,7 +35781,7 @@ const react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_m
 const Card = ({ recipe }) => {
     const navigate = (0, react_router_dom_1.useNavigate)();
     return react_1.default.createElement("div", { className: "card bg-white flex flex-col place-content-between", onClick: () => {
-            navigate(`/details/${recipe.id}`);
+            navigate(`/recipes-app/details/${recipe.id}`);
         } },
         react_1.default.createElement("div", { className: "relative" },
             react_1.default.createElement("div", { className: "absolute top-4 right-4" },
@@ -36234,7 +36234,7 @@ const Home = () => {
     if (error)
         throw error;
     if (loading)
-        return react_1.default.createElement(spinners_react_1.SpinnerDotted, { color: '#123B4F' });
+        return react_1.default.createElement(spinners_react_1.SpinnerDotted, { color: '#123B4F', size: "width:100%" });
     const sliderData = data.data.map((r) => {
         const { source: { urlSegment, longName, pictures, type, preparationTime: { total } } } = r;
         return {
@@ -36510,7 +36510,7 @@ function _setPrototypeOf(o, p) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("c7d33b667d10cd70b26d")
+/******/ 		__webpack_require__.h = () => ("76a1088d864010c41c9b")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

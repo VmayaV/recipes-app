@@ -11,7 +11,6 @@ const Dots = ({ activeIndex, onclick, pages, numberOfCards }: DotsProps) => {
         <div className="flex flex-wrap justify-center">
             {Array.from(Array(pages)).map((item, index) => {
                 const ind = index * numberOfCards;
-                console.log(ind)
                 return activeIndex === ind ?
                     <button
                         key={`${index}-active`}

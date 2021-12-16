@@ -2,6 +2,6 @@ export default interface ICard {
     id: string;
     title: string;
     imgUrl: string,
-    type: string,
+    recipeType: string,
     prepTime: string
 }

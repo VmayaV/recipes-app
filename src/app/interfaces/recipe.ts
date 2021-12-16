@@ -2,7 +2,7 @@ export default interface IRecipe {
     id: string;
     title: string;
     pictures: PictureFormat[],//should 
-    type: string,
+    recipeType: string,
     prepTime: string
 }
 type PictureFormat = {

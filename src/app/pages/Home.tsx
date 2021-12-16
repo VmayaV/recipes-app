@@ -52,13 +52,14 @@ const Home = () => {
             id: urlSegment,
             title: longName,
             pictures: pictures[0].formats,
-            type: type,
+            recipeType: type,
             prepTime: total
         }
     })
     const lastIndex = cardData.length - 1;
     const numberOfCards = isMobile ? Resolutions.mobile.numberOfCards : Resolutions.desktop.numberOfCards;
     const numberOfPages = isMobile ? lastIndex : Math.floor(lastIndex / numberOfCards);
+
     return <div className="bg-dark-blue md:px-20 md:py-10 pb-10">
         <h3 className="font-veener-two text-3xl leading-10 md:text-xl4.25 text-white md:leading-11 py-10 md:m-0 mx-10">
             h3/TITLE - Relateret opskrifter

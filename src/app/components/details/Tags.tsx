@@ -1,12 +1,12 @@
 import React from "react"
 
 const Tags = ({ tags }: { tags: string[] }) => {
-    return <div className="flex py-8">
+    return <div className="flex py-8 flex-wrap justify-center">
         {/* tags 
     Adding fixed tags, in case the list is empty
     */}
         {tags.map((tag: string) =>
-            <div className='bg-dark-gray mr-2 rounded-md text-white text-xs px-3 pb-2 pt-3'>
+            <div className='tag'>
                 {tag}
             </div>)}
         <div className='tag'>

@@ -1,27 +1,39 @@
 @tailwind base;
 @tailwind components;
 
-.fade-enter.card {
+.fade-enter {
     opacity: 0;
     transform: translateX(-100%);
   }
-  .fade-enter-active.card {
+  .fade-enter-active {
     opacity: 1;
     transform: translateX(0%);
   }
-  .fade-exit.card {
+  .fade-exit {
     opacity: 1;
     transform: translateX(0%);
   }
-  .fade-exit-active.card {
+  .fade-exit-active {
     opacity: 0;
     transform: translateX(100%);
   }
-  .fade-enter-active.card,
-  .fade-exit-active.card {
+  .fade-enter-active,
+  .fade-exit-active {
     transition: opacity 500ms, transform 500ms;
   }
   .tag{
-    @apply bg-dark-gray mr-2 rounded-md text-white text-xs px-3 py-2 flex
+    @apply bg-dark-gray mr-2 mb-2 rounded-md text-white text-xs px-3 pb-2 pt-4 flex
+  }
+  .nutrition-left-border {
+    @apply flex justify-between border-b border-l border-r md:border-r-0 border-light-gray
+  }
+  .nutrition-right-border {
+    @apply flex justify-between border-b border-l border-r md:border-r-0 border-light-gray
+  }
+  .disabled-nav-button{
+    opacity: 0.5;
+  }
+  .disabled-nav-button{
+    opacity: 1;
   }
 @tailwind utilities;

@@ -12,7 +12,7 @@ const Details = () => {
     if (error)
         throw error;
     if (loading)
-        return <SpinnerDotted color='#123B4F' />
+        return <SpinnerDotted color='#123B4F' size={"width:100%"} />
 
     const { source: {
         metaData,
@@ -25,8 +25,13 @@ const Details = () => {
         <main className="font-gotham">
             <header className="flex items-stretch flex-col md:flex-row">
                 <div className="bg-dark-blue basis-full md:basis-1/3 flex flex-col justify-between text-white px-5 pt-16.5 pb-12.5 md:px-20">
-                    <div className="text-xs">
-                        <span className="text-light-gray">Opskrifter</span><span>{'>'}</span>
+                    <div className="text-xs flex items-baseline">
+                        <span className="text-light-gray">Opskrifter</span>
+                        <span className="px-2">
+                            <svg width="4" height="6" viewBox="0 0 4 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.90684 2.76092L0.258303 0.0337122C0.161439 -0.0542624 3.98792e-10 0.0337122 3.00049e-09 0.253649L6.8043e-08 5.75206C7.01244e-08 5.92801 0.16144 6.05997 0.258303 5.972L3.87455 3.24479C4.03599 3.11282 4.03599 2.8489 3.90684 2.76092Z" fill="#CC092F" />
+                            </svg>
+                        </span>
                         <span>Klassisk Burger
                         </span>
                     </div>

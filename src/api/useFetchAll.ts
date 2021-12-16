@@ -9,7 +9,7 @@ export default function useFetchAll() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function init() {
+    const init = async () => {
       try {
         const response = await fetch(url);
         if (response.ok) {

@@ -5,18 +5,22 @@ import RightArrow from "./RightArrow"
 
 type NavigationControlsProps = {
     index: number,
-    dotsNumber: number,
+    pages: number,
     slideLeft: () => void,
     slideRight: () => void,
-    setIndex: (activeIndex: number) => void,
+    setIndex: (index: number) => void,
+    maxLength: number,
+    numberOfCards: number
 }
-const NavigationControls = ({ index, dotsNumber, slideLeft, slideRight, setIndex, }: NavigationControlsProps) => {
+const NavigationControls = ({ index, pages, slideLeft, slideRight, setIndex, maxLength, numberOfCards }: NavigationControlsProps) => {
+    console.log(index)
     return <div className="uppercase flex justify-between pt-11">
-        <LeftArrow prev={slideLeft} />
+        <LeftArrow prev={slideLeft} disabled={index === 0} />
         <Dots activeIndex={index}
-            onclick={(activeIndex: number) => setIndex(activeIndex)}
-            dotsNumber={dotsNumber} />
-        <RightArrow next={slideRight} />
+            onclick={(index: number) => setIndex(index)}
+            pages={pages}
+            numberOfCards={numberOfCards} />
+        <RightArrow next={slideRight} disabled={(index + pages) === maxLength} />
     </div>
 }
 

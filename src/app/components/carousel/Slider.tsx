@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { TransitionGroup, CSSTransition, SwitchTransition } from "react-transition-group";
 import NavigationControls from "./NavigationControls";
 
 type SliderProps = {
-    sliderImage: string,
+    maxLength: number,
     index: number;
     setIndex: (index: number) => void,
     children: JSX.Element,
+    numberOfCards: number,
+    pages: number
 };
 
-const Slider = ({ sliderImage, index, setIndex, children }: SliderProps) => {
+const Slider = ({ maxLength, index, setIndex, children, pages, numberOfCards }: SliderProps) => {
 
-    const numberOfCards = 4;
-
+    const [direction, setDirection] = useState(1);
     const slideLeft = () => {
         const prevIndex = index - numberOfCards;
         if (prevIndex < 0) {
@@ -20,18 +21,18 @@ const Slider = ({ sliderImage, index, setIndex, children }: SliderProps) => {
         } else {
             setIndex(prevIndex);
         }
+        setDirection(-1);
     };
 
     const slideRight = () => {
         const nextIndex = index + numberOfCards;
-        if (nextIndex >= sliderImage.length - 1) {
-            setIndex(sliderImage.length - numberOfCards - 1);
+        if (nextIndex >= maxLength - 1) {
+            setIndex(maxLength - 1);
         } else {
             setIndex(nextIndex);
         }
+        setDirection(1);
     };
-
-    const dotsNumber = Math.ceil((sliderImage.length - 1) / numberOfCards);
 
     return (
         <div>
@@ -49,10 +50,12 @@ const Slider = ({ sliderImage, index, setIndex, children }: SliderProps) => {
 
             <NavigationControls
                 index={index}
-                dotsNumber={dotsNumber}
+                pages={pages}
                 slideLeft={slideLeft}
                 slideRight={slideRight}
-                setIndex={setIndex} />
+                setIndex={setIndex}
+                numberOfCards={numberOfCards}
+                maxLength={maxLength} />
         </div>
     )
 }

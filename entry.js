@@ -35794,7 +35794,7 @@ const Card = ({ card }) => {
                 react_1.default.createElement("svg", { width: "16", height: "24", viewBox: "0 0 16 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
                     react_1.default.createElement("path", { d: "M16 5.86534C16 3.08229 13.9011 0 12.0152 0C10.1293 0 8 3.08229 8 5.86534C8 8.0798 9.12548 9.42643 10.7376 9.90524L10.5247 22.5337C10.5247 23.3416 11.1635 24 11.9848 24C12.8061 24 13.4753 23.3416 13.4449 22.5337L13.2319 9.90524C14.8745 9.45636 16 8.0798 16 5.86534Z", fill: "#CC092F" }),
                     react_1.default.createElement("path", { d: "M5.39713 1.02941C5.05263 1.02941 4.79426 1.29412 4.79426 1.64706V6.82353C4.79426 6.97059 4.67943 7.08824 4.53588 7.08824H3.8756C3.73206 7.08824 3.61722 6.97059 3.61722 6.82353V1.61765C3.58852 1.29412 3.33014 1.02941 3.01435 1.02941C2.66986 1.02941 2.41148 1.29412 2.41148 1.64706V6.82353C2.41148 6.97059 2.29665 7.08824 2.15311 7.08824H1.49282C1.34928 7.08824 1.23445 6.97059 1.23445 6.82353V1.61765C1.20574 1.29412 0.947368 1 0.602871 1C0.258373 1 0 1.29412 0 1.61765V7.91177C0 8.97059 0.803828 9.85294 1.80861 9.94118L1.60766 22.5588C1.60766 23.3529 2.21053 24 2.98565 24C3.76077 24 4.39234 23.3529 4.36364 22.5588L4.19139 9.97059C5.19617 9.88235 6 8.97059 6 7.94118V1.61765C6 1.29412 5.71292 1.02941 5.39713 1.02941Z", fill: "#CC092F" })),
-                react_1.default.createElement("span", { className: "text-gray text-sm leading-7.5 px-2" }, card.type)),
+                react_1.default.createElement("span", { className: "text-gray text-sm leading-7.5 px-2" }, card.recipeType)),
             react_1.default.createElement("div", { className: "flex p-4" },
                 react_1.default.createElement("svg", { width: "24", height: "24", viewBox: "0 0 24 24", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
                     react_1.default.createElement("path", { d: "M12 24C5.37441 24 0 18.6256 0 12C0 5.37441 5.37441 0 12 0C18.6256 0 24 5.37441 24 12C24 18.6256 18.6256 24 12 24ZM12 1.99052C6.48341 1.99052 1.99052 6.48341 1.99052 12C1.99052 17.5166 6.48341 22.0095 12 22.0095C17.5166 22.0095 22.0095 17.5166 22.0095 12C22.0095 6.48341 17.5166 1.99052 12 1.99052Z", fill: "#CC092F" }),
@@ -35901,7 +35901,6 @@ const react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules
 const Dots = ({ activeIndex, onclick, pages, numberOfCards }) => {
     return (react_1.default.createElement("div", { className: "flex flex-wrap justify-center" }, Array.from(Array(pages)).map((item, index) => {
         const ind = index * numberOfCards;
-        console.log(ind);
         return activeIndex === ind ?
             react_1.default.createElement("button", { key: `${index}-active`, onClick: () => onclick(ind), className: "m-1" },
                 react_1.default.createElement("svg", { width: "17", height: "16", viewBox: "0 0 17 16", fill: "none", xmlns: "http://www.w3.org/2000/svg" },
@@ -35958,7 +35957,6 @@ const Dots_1 = __importDefault(__webpack_require__(/*! ./Dots */ "./src/app/comp
 const LeftArrow_1 = __importDefault(__webpack_require__(/*! ./LeftArrow */ "./src/app/components/carousel/LeftArrow.tsx"));
 const RightArrow_1 = __importDefault(__webpack_require__(/*! ./RightArrow */ "./src/app/components/carousel/RightArrow.tsx"));
 const NavigationControls = ({ index, pages, slideLeft, slideRight, setIndex, maxLength, numberOfCards }) => {
-    console.log(index);
     return react_1.default.createElement("div", { className: "uppercase flex justify-between pt-11" },
         react_1.default.createElement(LeftArrow_1.default, { prev: slideLeft, disabled: index === 0 }),
         react_1.default.createElement(Dots_1.default, { activeIndex: index, onclick: (index) => setIndex(index), pages: pages, numberOfCards: numberOfCards }),
@@ -36393,7 +36391,7 @@ const Home = () => {
             id: urlSegment,
             title: longName,
             pictures: pictures[0].formats,
-            type: type,
+            recipeType: type,
             prepTime: total
         };
     });
@@ -36661,7 +36659,7 @@ function _setPrototypeOf(o, p) {
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("5f26619f459ec84390ec")
+/******/ 		__webpack_require__.h = () => ("da5836646473043908d0")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

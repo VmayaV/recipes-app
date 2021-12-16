@@ -13,7 +13,6 @@ type NavigationControlsProps = {
     numberOfCards: number
 }
 const NavigationControls = ({ index, pages, slideLeft, slideRight, setIndex, maxLength, numberOfCards }: NavigationControlsProps) => {
-    console.log(index)
     return <div className="uppercase flex justify-between pt-11">
         <LeftArrow prev={slideLeft} disabled={index === 0} />
         <Dots activeIndex={index}

@@ -6,7 +6,7 @@ const Card = ({ card }: { card: ICard }) => {
     const navigate = useNavigate();
 
     return <div
-        className="card bg-white flex flex-col place-content-between"
+        className="card bg-white flex flex-col place-content-between cursor-pointer"
         onClick={() => {
             navigate(`/recipes-app/details/${card.id}`);
         }}>

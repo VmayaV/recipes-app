@@ -1,4 +1,4 @@
-export default interface IRecipe {
+export default interface ICard {
     id: string;
     title: string;
     imgUrl: string,

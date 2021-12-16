@@ -24,11 +24,14 @@
   .tag{
     @apply bg-dark-gray mr-2 mb-2 rounded-md text-white text-xs px-3 pb-2 pt-4 flex
   }
+  .nutrition-text{
+    @apply pt-2 pr-2 text-base md:leading-6 leading-7
+  }
   .nutrition-left-border {
-    @apply flex justify-between border-b border-l border-r md:border-r-0 border-light-gray
+    @apply flex justify-between border-b border-l border-r md:border-r-0 border-light-gray pl-2
   }
   .nutrition-right-border {
-    @apply flex justify-between border-b border-l border-r md:border-r-0 border-light-gray
+    @apply flex justify-between border-b md:border-l md:border-r border-r-0 border-light-gray
   }
   .disabled-nav-button{
     opacity: 0.5;

@@ -439,6 +439,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
+  .nutrition-text {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+  @media (min-width: 768px) {
+
+  .nutrition-text {
+    line-height: 1.5rem;
+  }
+}
   .nutrition-left-border {
   display: flex;
   justify-content: space-between;
@@ -447,6 +459,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-right-width: 1px;
   --tw-border-opacity: 1;
   border-color: rgb(231 225 221 / var(--tw-border-opacity));
+  padding-left: 0.5rem;
 }
   @media (min-width: 768px) {
 
@@ -458,15 +471,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: flex;
   justify-content: space-between;
   border-bottom-width: 1px;
-  border-left-width: 1px;
-  border-right-width: 1px;
+  border-right-width: 0px;
   --tw-border-opacity: 1;
   border-color: rgb(231 225 221 / var(--tw-border-opacity));
 }
   @media (min-width: 768px) {
 
   .nutrition-right-border {
-    border-right-width: 0px;
+    border-left-width: 1px;
+  }
+
+  .nutrition-right-border {
+    border-right-width: 1px;
   }
 }
   .disabled-nav-button{
@@ -530,6 +546,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .basis-full {
   flex-basis: 100%;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .resize {
   resize: both;
@@ -632,9 +651,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pr-2 {
   padding-right: 0.5rem;
-}
-.pt-2 {
-  padding-top: 0.5rem;
 }
 .text-left {
   text-align: left;

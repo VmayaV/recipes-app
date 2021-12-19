@@ -79,7 +79,7 @@ This is an example of how to list things you need to use the software and how to
    ```js
    npm run serve
    ```
-4. Navigate to http://localhost:8081/
+4. Navigate to http://localhost:8081/recipes-app/
 5. Explore the app on https://vmayav.github.io/recipes-app/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
